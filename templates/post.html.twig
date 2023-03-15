@@ -5,11 +5,12 @@
     {{ parent() }}
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href={{ asset('css/post.css') }}>
+    {{ encore_entry_link_tags('post') }}
 {% endblock %}
     {% block javascripts %}
         {{ parent() }}
-        <script src="{{ asset('javascript/addlike.js') }}" defer></script>
+        {{ encore_entry_script_tags('post') }}
+         <script src="{{ asset('javascript/addlike.js') }}" defer></script>
         {% endblock %}
     <section class="hero">
         <div class="container">
